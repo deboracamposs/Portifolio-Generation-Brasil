@@ -8,9 +8,11 @@
     outline: none;
 }
 
+
 :root {
-    --purple-50:#f4eaff;
-    --purple-100:#e9dcfa;
+
+    --purple-50: #f4eaff;
+    --purple-100: #e9dcfa;
     --purple-200: #cdb3f0;
     --purple-300: #b186e5;
     --purple-400: #9460db;
@@ -20,16 +22,19 @@
     --purple-800: #441f88;
     --purple-900: #2a0e4d;
 
+ 
     --gray-200: #e8e8e8;
     --gray-400: #505861;
     --black: #171717;
     --white: #FAF7FF;
 
+  
     --error: #e63946;
 
     --shadow-sm: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
     --shadow-md: 0 0.25rem 0.75rem rgba(107, 54, 200, 0.3);
     --shadow-lg: 0 0.5rem 1.5rem rgba(107, 54, 200, 0.2);
+
 
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -38,20 +43,22 @@
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
 
+  
     --text-sm: 0.75rem;
     --text-base: 1rem;
     --text-lg: 1.25rem;
-    --text-xl: 1.5rem; 
+    --text-xl: 1.5rem;
     --text-2xl: 2rem;
     --text-3xl: 2.5rem;
 
+ 
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
     --radius-xl: 2rem;
     --radius-full: 50%;
 
-    --transition-default: all 0.3s ease;  
+    --transition-default: all 0.3s ease;
 }
 
 html {
@@ -65,8 +72,7 @@ body {
     background-color: var(--white);
     line-height: 1.6;
     color: var(--black);
-
-}   
+}
 
 main {
     flex: 1;
@@ -105,7 +111,7 @@ main {
 
 .botao:hover {
     border-color: var(--purple-800);
-    background-color: var(--purple-600);
+    background-color: var(--purple-800);
     box-shadow: var(--shadow-md);
     transform: translateY(-0.25rem);
 }
@@ -121,14 +127,14 @@ main {
     background-color: var(--purple-500);
     color: var(--white);
     transform: translateY(-0.25rem);
-}    
+}
 
 .botao.botao-sm,
 .botao-outline.botao-sm {
     min-width: 6rem;
-    padding: 0.25rem var(--spacing-md);
+    padding: 0.25rem var(--spacing-sm);
     border-width: 0.125rem;
-    border-radius: 0.125rem;
+    border-radius: 0.25rem;
     font-size: var(--text-sm);
 }
 
@@ -151,7 +157,6 @@ header a {
 
 header a:hover {
     color: var(--purple-100);
-
 }
 
 #titulo {
@@ -166,7 +171,7 @@ header a:hover {
     max-width: 70rem;
     height: 100%;
     margin: 0 auto;
-    padding: var(--spacing-md);
+    padding: 0 var(--spacing-md);
 }
 
 .menu-list {
@@ -186,7 +191,7 @@ header a:hover {
     min-height: calc(100vh - 5rem);
 }
 
-.hero-content{
+.hero-content {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -213,19 +218,22 @@ header a:hover {
 .hero-image {
     display: flex;
     flex: 1;
-    justify-content: center;   
-}       
+    justify-content: center;
+}
 
-.hero-image img{
+.hero-image img {
     width: 100%;
     max-width: 100%;
     border-radius: var(--radius-xl);
 }
 
-@keyframes float{
-    0% {
+@keyframes float {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-1.25rem);
     }
@@ -244,13 +252,13 @@ header a:hover {
     background-color: var(--gray-200);
 }
 
-.about-image{
+.about-image {
     flex: 0 0 17.5rem;
 }
 
 .about-image img {
     width: 100%;
-    border: 0.35rem solid var(--purple-50);
+    border: 0.35rem solid var(--purple-500);
     border-radius: var(--radius-full);
     box-shadow: var(--shadow-lg);
 }
@@ -290,10 +298,10 @@ header a:hover {
 .data-item {
     display: flex;
     flex-direction: column;
-    align-items: center;;
+    align-items: center;
 }
 
-.data-number{
+.data-number {
     font-size: var(--text-xl);
     font-weight: 700;
     text-align: center;
@@ -303,7 +311,7 @@ header a:hover {
 .data-label {
     font-size: var(--text-base);
     text-align: center;
-    color: var(--gray-400)
+    color: var(--gray-400);
 }
 
 .projects-container {
@@ -398,6 +406,7 @@ header a:hover {
     margin-top: var(--spacing-sm);
 }
 
+
 .swiper-wrapper {
     align-items: stretch;
 }
@@ -419,13 +428,8 @@ header a:hover {
     color: var(--purple-500);
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    color: var(--purple-800);
-}
-
-.swiper-button-next:hover::after,
-.swiper-button-prev:hover::after {
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
     color: var(--purple-800);
 }
 
@@ -440,7 +444,8 @@ header a:hover {
     width: var(--spacing-lg);
     border-radius: var(--radius-sm);
     background-color: var(--purple-500);
-}    
+}
+
 
 .contact-container {
     display: grid;
@@ -477,13 +482,13 @@ header a:hover {
 }
 
 .social-icon:hover img {
-    filter: brightness(0)
-            saturate(100%)
-            invert(42%)
-            sepia(93%)
-            saturate(1352%)
-            hue-rotate(243deg)
-            brightness(79%)
+    filter: brightness(0) 
+            saturate(100%) 
+            invert(42%) 
+            sepia(93%) 
+            saturate(1352%) 
+            hue-rotate(243deg) 
+            brightness(79%) 
             contrast(91%);
 }
 
@@ -491,7 +496,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-}    
+}
 
 form label {
     font-size: var(--text-base);
@@ -578,16 +583,11 @@ footer {
     width: 6rem;
     height: 6rem;
     filter: brightness(0) 
-            saturate(100%)
-            invert(11%)
-            sepia(69%)
-            saturate(3759%)
-            hue-rotate(256deg)
-            brightness(101%)
+            saturate(100%) 
+            invert(11%) 
+            sepia(69%) 
+            saturate(3759%) 
+            hue-rotate(256deg) 
+            brightness(101%) 
             contrast(96%);
 }
-
-
-
-
-    
