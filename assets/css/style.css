@@ -594,18 +594,18 @@ footer {
             contrast(96%);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
 
     .section-container {
-        padding: var(--spacing-md) var(--spacing-sm);
+        padding: var(--spacing-lg) var(--spacing-md);
     }
 
     .section-container h1 {
-        font-size: var(--text-xl);
+        font-size: var(--text-3xl);
     }
 
     .section-container h2 {
-        font-size: var(--text-xl);
+        font-size: var(--text-2xl);
     }
 
     .section-container p {
@@ -617,29 +617,30 @@ footer {
     }
 
     .success-content h1 {
-        font-size: var(--text-xl);
+        font-size: var(--text-3xl);
     }
 
     .success-content h2 {
-        font-size: var(--text-base);
+        font-size: var(--text-x1);
     }
 
-    #titulo {
-        font-size: var(--text-xl);
-    }
-
-    .menu-list {
-        display: none;
-    }
+    @media (max-width: 768px) {
+        .menu-list {
+            display: none;
+        }
 
     .hero-container {
-        gap: var(--spacing-sm);
+        flex-direction: column-reverse;
+        gap: var(--spacing-lg);
+        min-height: 60vh;
+        text-align: center;
     }
 
-    .hero-content {
-        gap: var(--spacing-xs);
-        width: 100%;
+    .hero-content, 
+    .hero-image { 
+        width: 90%;
     }
+
 
     .buttons-container {
         flex-direction: column;
@@ -664,24 +665,56 @@ footer {
     }
 
     .hero-image img {
-        max-width: 20rem;
+        object-fit: cover;
+    }
+
+    .buttons-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-container .botao,
+    .hero-container .botao-outline {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
     }
 
     .about-container {
-        margin: var(--spacing-lg) 0.5rem;
-        padding: var(--spacing-md);
+        flex-direction: column;
+        gap: var(--spacing-md);
+        margin: var(--spacing-lg) ;
+        padding: var(--spacing-lg);
+    }
+
+    .about-image {
+        flex: 0 0 auto;
+        width: 100%;
+        display: flex;        
     }
 
     .about-image img {
-        max-width: 14rem;
+        max-width: 16rem;
+        width: 100%;
     }
 
-    .about-buttons-data .botao,
-    .about-buttons-data .botao-outline {
+    .about-content {
         width: 100%;
-        padding: 0.75rem var(--spacing-lg);
-        font-size: var(--text-base);
-        text-align: center;
+    }
+
+    .about-buttons-data {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: stretch;
+    }
+
+    .about-buttons-data .botao {
+        margin-right: 0;
+    }
+
+    .data-container {
+        justify-content: center;
+        width: 100%;
     }
 
     .data-number {
@@ -697,36 +730,76 @@ footer {
     }
 
     .projects-swiper {
-        position: relative;
         margin: 0;
         padding: var(--spacing-sm) 0 2rem 0;
-        overflow: visible;
     }
 
     .project-card {
         width: 100%;
-        height: 20rem;
-        max-width: 20rem;
-    }
-
-    .project-image {
-        height: 10rem;
+        height: 30rem;
+        min-height: 30rem;
+        max-height: 30rem;
+        max-width: 100%;
     }
 
     .project-content {
-        padding: var(--spacing-md);
-    }
-
-    .project-content h3 {
-        font-size: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;;
     }
 
     .project-content p {
-        font-size: 0.95rem;
+        flex: 1;
+        overflow: hidden;
+    }
+    
+    .project-tags {
+        min-height: 2.5rem;
+        align-items: flex-start;
     }
 
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }    
+
     .contact-container {
-        width: 100%;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .success-container {
+        padding: var(--spacing-xl) var(--spacing-md);
+        min-height: calc(100vh - 10rem);
+    }
+
+    .success-content {
+        gap: var(--spacing-lg);
+        max-width: 35rem;
+    }
+
+    .success-icon {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .success-icon img {
+        width: 5rem;
+        height: 5rem;
     }
 
     .contact-info p {
